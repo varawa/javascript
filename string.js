@@ -35,6 +35,7 @@ let hobbies = "     coding reading running      "
 
 let result = hobbies.trim() ;
 console.log(result)
+console.log(result.lastIndexOf("running")) ;
 
 console.log(result.lastIndexOf("Running")) ;
 console.log(result.includes("Running")) ;   //To check if something is included or not .
@@ -51,3 +52,11 @@ let arrcolors1 = favcolors.split('.') ;
 let arrcolors2 = favcolors.split(',') ;
 console.log(arrcolors1) 
 console.log(arrcolors2) 
+
+//Strings in javascript are immutable .
+
+let str = "1234" ;
+
+str[0] = "p" ;      //No Change .
+
+//Even when we concatenate two strings, the concatenated string takes a new memory location but never re-writes the older string .
