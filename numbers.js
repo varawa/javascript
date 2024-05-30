@@ -8,11 +8,11 @@ console.log(score , typeof score)
 //let result = score/2 ;    quotient
 //let result = score%2 ;    remainder
 
-//PRECEDANCE
-//() Bracket
-//** Power
-//* / % (from left to right we evaluate)
-//+ - (from left to write we evaluate)
+//1.  PRECEDANCE
+//2.  () Bracket
+//3.  ** Power
+//4.  * / % (from left to right we evaluate)
+//5.  + - (from left to write we evaluate)
 
 let result = score *2 + (4*3) - 8 / 2 % 4
 
@@ -34,3 +34,25 @@ console.log(age !== "22")   //Strict not equal
 //TYPE CONVERSION
 
 let stringType = "54" ;
+
+console.log(stringType , typeof stringType) ;
+
+//NUMBER METHOD
+
+let numberType = Number(stringType) ;
+console.log(numberType , typeof numberType) ;
+
+//STRING METHOD
+
+let stringT = String(numberType) ; 
+console.log(stringT) ;
+
+//NOTE : In number method , input string must have numeric values .
+
+//BOOLEAN METHOD
+
+let Age = 33 ;
+let bool = Boolean(Age) ;
+console.log(bool) ;
+
+//Only empty string is False, all other are True .(Spaces are true too) .
