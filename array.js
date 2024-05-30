@@ -24,4 +24,12 @@ console.log(dishes.concat(newdish)) ;
 //LENGTH METHOD
 
 console.log(dishes.length) ;
+console.log(newdish.length) ;
 
+//PUSH METHOD
+
+console.log(dishes.push("ten")) ;   //Returns length of new array .
+
+//POP METHOD
+
+console.log(dishes.pop()) ;         //Returns the popped element .
