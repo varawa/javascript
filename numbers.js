@@ -34,3 +34,26 @@ console.log(age !== "22")   //Strict not equal
 //TYPE CONVERSION
 
 let stringType = "54" ;
+
+console.log(stringType , typeof stringType) ;
+
+//NUMBER METHOD
+
+let numberType = Number(stringType) ;
+console.log(numberType , typeof numberType) ;
+
+//STRING METHOD
+
+let stringT = String(numberType) ; 
+console.log(stringT) ;
+
+//NOTE : In number method , input string must have numeric values .
+
+//BOOLEAN METHOD
+
+let Age = 33 ;
+let bool = Boolean(Age) ;
+console.log(bool) ;
+
+//Only empty string is False, all other are True .(Spaces are true too) .
+
