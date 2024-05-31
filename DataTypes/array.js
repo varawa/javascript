@@ -6,6 +6,7 @@ let dishes = ["one" , "two" , "three" , "four"] ;
 console.log(dishes[1]) ;
 console.log(dishes[4]) ;
 
+
 //In js, unlike other programming languages when we access a location which doesn't exist in array we get undefined instead of an error .
 
 dishes[2] = "new" ;
