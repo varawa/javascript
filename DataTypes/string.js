@@ -48,6 +48,7 @@ console.log(names.slice(0,3)) ;  //Excludes last index, i.e. 0 to 2 .
 
 let favcolors = "bro.wn,bla.ck,gre.en,bl.ue" ;
 
+
 let arrcolors1 = favcolors.split('.') ;
 let arrcolors2 = favcolors.split(',') ;
 console.log(arrcolors1) 

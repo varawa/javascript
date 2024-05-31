@@ -10,6 +10,7 @@ console.log(typeof bool , typeof string) ;
 let email = "xyzgmail" ;
 
 let booleanval = email.includes("x") ;
+
 console.log(booleanval) ;
 
 //Comparison Operators
