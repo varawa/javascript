@@ -42,3 +42,9 @@ for(let j = 1 ; j <= 10 ; j++){
     }
     console.log(j) ;
 }
+
+//Ternary Operators
+
+let age = 17 ;
+
+let result = age > 18 ? "qualify" : "disqualify" ;
