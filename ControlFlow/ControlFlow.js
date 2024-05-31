@@ -11,7 +11,7 @@ for(let i = 1 ; i <= 10 ; i++){
 let num = ["ek" , "do" , "teen" , "chaar"] ;
 
 for(let i = 0 ; i < num.length ; i++){
-    console.log(num[i] , " ") ;
+    console.log(num[i]) ;
 }
 
 //While Loops
@@ -26,7 +26,7 @@ while(j <= 5){
 j = 0;
 
 while(j < num.length){
-    console.log(num[j] , " ") ;
+    console.log(num[j]) ;
     j++ ;
 }
 
