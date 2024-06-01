@@ -3,6 +3,8 @@
 
 ex = 4 ;
 
-console.log(test)
+console.log(ex)
 
 var ex ;
+
+//Hoisting is not possible for function declarations , let , const etc .
