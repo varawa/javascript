@@ -7,4 +7,6 @@ console.log(ex)
 
 var ex ;
 
-//Hoisting is not possible for function declarations , let , const etc .
+//It works for var and normal function declarations .
+
+//Hoisting is not possible for anonymous functions , let , const etc .
