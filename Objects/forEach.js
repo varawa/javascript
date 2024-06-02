@@ -6,4 +6,6 @@ let dishes = ["one","two","three","four"] ;
 
 //Using for loop
 
-dishes.forEach(function(element))
+dishes.forEach(function(element){   //Functional Programming .
+    console.log(element) ;
+})
