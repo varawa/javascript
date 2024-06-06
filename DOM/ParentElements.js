@@ -1,6 +1,6 @@
 //Parent , children and sibling elements .
 
-/*let parentEl = document.querySelector('.content') ;
+let parentEl = document.querySelector('.content') ;
 
 //Parent Element
 console.log(parentEl) ;
@@ -19,7 +19,7 @@ Array.from(parentEl.children).forEach(function(element){
 
 newArray.forEach(function(element){
     element.classList.add("coders") ;
-}) ;*/
+}) ;
 
 //Child Element
 
