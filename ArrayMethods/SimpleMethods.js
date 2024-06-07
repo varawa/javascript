@@ -20,3 +20,25 @@ console.log(num) ;
 
 let joined = letters.join('.') ;
 console.log(joined) ;
+
+//Sort (Mutating)
+
+//By default sort method is used for strings .
+//It firstly convert everything into string and then sorting is done .
+
+let letter = ["b","a","f","d","e"] ;
+
+console.log(letter.sort()) ;
+
+let numbers = [8,3,-1,-9,4] ;       //Unexpected Results .
+
+
+//if a-b < 0 => a < b => A,B (Keep the order same .) .
+
+//if a-b > 0 => a > b => B,A (Switch the order) .
+
+numbers.sort((a,b)=>{
+    return a-b ;
+})
+
+console.log("Sorted : ",numbers) ;
