@@ -90,3 +90,75 @@ let resultIndex = students.findIndex(student=>{
 
 console.log(resultIndex) ;
 
+
+
+//"some" and "every" method 
+//-------------------------
+
+//sum method returns "true" if "any" array element pass the test .
+
+//every method returns "true" if all array element pass the test .
+
+let nums1 = [24 , 55 , 34 , 64 , 12] ;
+
+let flag1 = nums1.some(check=>{
+    return check > 50 ;
+})
+
+console.log(flag1) ;
+
+let flag2 = nums1.every(check=>{
+    return check > 50 ; 
+})
+
+console.log(flag2) ;
+
+
+
+//"Flat" Method
+//-------------
+
+//It creates a new array with the elements of the subarrays
+//concatenated into it .
+
+let arr = [1,2,[3],[4,5,6,[7,8]]] ;
+
+console.log("Before flat : ",arr) ;
+
+let resultFlat = arr.flat(2) ;      //Depth of flat function : 2.
+
+console.log("After flat : ",resultFlat) ;
+
+
+
+//"flatMap" method
+
+//It is the combination of the "map()" method .
+//Followed by the "flat()" method of depth l .
+
+let cart = [{
+    named:"Phone",
+    qty:2,
+    price:5000
+},
+{
+    named:"Tablet",
+    qty:1,
+    price:50000
+}]
+
+console.log("Before flatMap : ",cart) ;
+
+let newCart = cart.flatMap(item=>{
+    if(item.named === "Phone"){
+        return [item , {
+            named: "Screen Protector",
+            qty: 1,
+            price: 0
+        }];
+    }else{
+        return[item] ;
+    }
+})
+
+console.log("After flatMap : ",newCart) ;
