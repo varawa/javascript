@@ -10,3 +10,23 @@
 //For now we focus on local storage .
 
 console.log(window) ;
+
+//Get Item
+
+//Set Item
+
+//Update Item
+
+//Set the item in local storage .
+
+//localStorage.setItem('key' , 'value') ;
+
+localStorage.setItem('its' , "programming") ;
+localStorage.setItem('age' , "5") ;
+
+console.log(localStorage) ;
+
+localStorage.setItem('age' , 26) ;  //Overwrite the previous value .
+console.log(localStorage) ;
+
+console.log(localStorage.getItem('its')) ;
