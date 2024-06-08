@@ -30,3 +30,12 @@ localStorage.setItem('age' , 26) ;  //Overwrite the previous value .
 console.log(localStorage) ;
 
 console.log(localStorage.getItem('its')) ;
+
+//Remove items 
+
+localStorage.removeItem("age") ;
+console.log(localStorage) ;
+
+//Clear
+
+//localStorage.clear() ;
