@@ -38,7 +38,7 @@ let numbers = [8,3,-1,-9,4] ;       //Unexpected Results .
 //if a-b > 0 => a > b => B,A (Switch the order) .
 
 numbers.sort((a,b)=>{
-    return a-b ;
+    return a-b ;            //Ascending
 })
 
 console.log("Sorted : ",numbers) ;
