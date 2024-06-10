@@ -32,7 +32,9 @@ let request = new XMLHttpRequest() ;
 console.log(request) ;
 
 request.addEventListener('readystatechange' , ()=>{
-    console.log(request , request.responseText) ;
+    if(request.readyState === 4 && request.status == 200){
+        console.log(request , request.responseText) ;
+    }
 }) ;
 
 //Set-up the request .
