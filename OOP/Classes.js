@@ -19,6 +19,10 @@ class car{
         console.log("This is start engine method using getter .") ;
     }
 
+    get description(){
+        console.log(`Color of car is ${this.color} .`) ;
+    }
+
     set changeColor(color){
         console.log(this.color = color) ;
     }
@@ -28,12 +32,20 @@ car.prototype.breakMethod = function(){
     console.log("Break method of car .") ;
 }
 
+//Static Method
+
+car.break = function(){
+    console.log("Its a static method .") ;
+}
+car.break() ;
+
 let honda = new car("Red" , 2022) ;
 console.log(honda) ;
 console.log(honda.__proto__) ;          //Compatible with prototype model .
 honda.breakMethod() ;
-honda.starTEngine() ;                   //Accessing as function
+honda.starTEngine() ;                   //Accessing as function .
 
+honda.description ;
 honda._startEngine ;                    //Accessing as property .
 honda.changeColor = "Black" ;           //Accessing as property .
 
