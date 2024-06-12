@@ -7,7 +7,8 @@ let todos = (callback)=>{
     request.addEventListener('readystatechange' , ()=>{
         if(request.readyState === 4 && request.status == 200){
             //console.log(request , request.responseText) ;
-            callback(undefined , request.responseText) ;
+            let data = JSON.parse(request.responseText) ;
+            callback(undefined , data) ;
         }else if(request.readyState === 4){
             //console.log("Data could not be fetched .") ;
             callback("Data could not be fetched" , undefined) ;
@@ -35,3 +36,29 @@ todos((error , data)=>{
 
 console.log(3) ;
 console.log(4) ;
+
+//Chain of todo function callback
+
+//Callback hell.
+
+todos("data.json" , (error,data)=>{
+    if(error){
+        console.log(error) ;
+        }else{
+            console.log(data) ;
+        }
+        todos("mario.json" , (error,data)=>{
+            if(error){
+                console.log(error) ;
+            }else{
+                console.log(data) ;
+            }
+            todos("lurie.json" , (error,data)=>{
+                if(error){
+                    console.log(error) ;
+                }else{
+                    console.log(data) ;
+                }
+            })
+        })
+})
