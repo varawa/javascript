@@ -1,6 +1,6 @@
 //CallBack Function
 
-let todos = (callback)=>{
+/*let todos = (callback)=>{
 
     let request = new XMLHttpRequest() ;
 
@@ -22,17 +22,17 @@ let todos = (callback)=>{
     //Sending the request .
     
     request.send() ;
-}
+}*/
 
 //Async code examples .
 
-todos((error , data)=>{
+/*todos((error , data)=>{
     if(error){
         console.log(error) ;
     }else{
         console.log(data) ;
     }
-}) ;
+}) ;*/
 
 console.log(3) ;
 console.log(4) ;
@@ -41,7 +41,7 @@ console.log(4) ;
 
 //Callback hell.
 
-todos("data.json" , (error,data)=>{
+/*todos("data.json" , (error,data)=>{
     if(error){
         console.log(error) ;
         }else{
@@ -61,4 +61,23 @@ todos("data.json" , (error,data)=>{
                 }
             })
         })
+})*/
+
+//Promise
+
+let getSomething = ()=>{
+    return new Promise(resolve , reject=>{
+        resolve("Some data .") ;
+        //reject("Some error .") ;
+    })
+}
+
+getSomething().then((data)=>{
+    console.log(data) ;
+}).catch((error)=>{
+    console.log(error) ;
 })
+
+let todos = (resource , callback)=>{
+    return new Promise ;
+}

@@ -1,0 +1,1 @@
+//Everything in javascript is in execution context .
