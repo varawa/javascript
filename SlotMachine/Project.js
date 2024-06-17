@@ -125,7 +125,7 @@ const getWinnings = (rows , bet , lines)=>{
         let allSame = true ;
 
         for(const symbol of symbols ){
-            if(symbol != symbol[0]){
+            if(symbol != symbols[0]){
                 allSame = false ;
                 break ;
             }
@@ -135,6 +135,7 @@ const getWinnings = (rows , bet , lines)=>{
             winnings += bet * SYMBOL_VALUES[symbols[0]] ;
         }
     }
+    return winnings ;
 }
 
 let balance = deposit() ;
@@ -143,4 +144,8 @@ const bet  = getBet(balance , numberOfLines) ;
 var reels = spin() ;
 const rows = transpose(reels) ;
 printRows(rows) ;
+
+const winning = getWinnings(rows , bet , numberOfLines) ;
+
+console.log("You won, $" + winning.toString()) ;
 
