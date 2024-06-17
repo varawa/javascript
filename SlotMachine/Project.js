@@ -6,11 +6,6 @@
 //6. Give the user their winnings .
 //7. Play Again .
 
-/*function deposit(){
-    return 1 ;
-}
-
-const x = deposit() ;*/
 const prompt = require("prompt-sync")() ;
 
 const ROWS = 3 ;
@@ -138,14 +133,31 @@ const getWinnings = (rows , bet , lines)=>{
     return winnings ;
 }
 
-let balance = deposit() ;
-const numberOfLines = getNumberOfLines() ;
-const bet  = getBet(balance , numberOfLines) ;
-var reels = spin() ;
-const rows = transpose(reels) ;
-printRows(rows) ;
+const game = ()=>{
 
-const winning = getWinnings(rows , bet , numberOfLines) ;
+    let balance = deposit() ;
 
-console.log("You won, $" + winning.toString()) ;
+    while(true){
+        console.log("You have a balance of $" + balance) ;
+        const numberOfLines = getNumberOfLines() ;
+        const bet  = getBet(balance , numberOfLines) ;
+        balance -= bet*numberOfLines ;
+        var reels = spin() ;
+        const rows = transpose(reels) ;
+        printRows(rows) ;
+        const winning = getWinnings(rows , bet , numberOfLines) ;
+        balance += winning ;
+        console.log("You won, $" + winning.toString()) ;
 
+        if(balance <= 0){
+            console.log("You ran out of money !") ;
+            break ;
+        }
+
+        const playAgain  = prompt("Do you want to play again (y/n)? ");
+
+        if(playAgain != "y")break ;
+    }
+}
+
+game() ;
